@@ -1,6 +1,16 @@
 from django import forms
 
 from posts.models import Comment, Post
+from .models import ExcelFile
+ 
+class ExcelFileForm(forms.ModelForm):
+    class Meta:
+        model = ExcelFile
+        fields = ['file']
+
+
+
+
 
 
 class CommentForm(forms.ModelForm):
@@ -25,3 +35,13 @@ class PostForm(forms.ModelForm):
         fields = [
             "content",
         ]
+
+
+
+
+
+
+
+
+class Quit(forms.Form):
+    pass
